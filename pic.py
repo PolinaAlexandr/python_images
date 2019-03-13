@@ -15,7 +15,7 @@ def one_color():
     pic.save('monocolor.png')
 
 
-def color_duo():
+def colorful():
     pic = Image.new('RGB', (300, 300), color = 'blue')
     x, y = pic.size
     eX, eY = 60, 60 
@@ -68,4 +68,4 @@ def color_duo():
 
 if __name__ == "__main__":
     # one_color()
-    color_duo()
+    colorful()
