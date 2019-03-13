@@ -1,4 +1,12 @@
 from PIL import Image, ImageColor, ImageDraw
+import os 
+from os import path
+
+
+path = "pics_pngs"
+
+if not os.path.exists(path):
+    os.mkdir("pics_pngs")
 
 
 def one_color():
@@ -9,15 +17,15 @@ def one_color():
 def color_duo():
     pic = Image.new('RGB', (300, 300), color = 'blue')
     x, y = pic.size
-    eX, eY = 30, 30 
+    eX, eY = 60, 50 
 
     pic_in =  (x/2 - eX/2, y/2 - eY/2, x/2 + eX/2, y/2 + eY/2)
     draw = ImageDraw.Draw(pic)
-    draw.ellipse(pic_in, fill='brown', outline='black')
+    draw.ellipse(pic_in, fill='green', outline='white')
 
     del draw
-
-    pic.save("circle.png")
+    fullpath = (os.path.join(path, "duo.png"))
+    pic.save(fullpath)
     pic.show()
 
 
