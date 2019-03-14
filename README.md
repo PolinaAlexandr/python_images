@@ -4,3 +4,7 @@ Simple images using PIL and math.
 ```shell
     $ python3 pic.py 
 ```
+2) Mandelbrot fractal image:
+```shell
+    $ python3 mandelbrot_fractal.py
+```
